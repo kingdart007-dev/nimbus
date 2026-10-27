@@ -18,8 +18,9 @@ abstract final class AppTheme {
       useMaterial3: true,
       brightness: brightness,
       colorScheme: scheme,
-      scaffoldBackgroundColor:
-          isDark ? AppColors.darkCanvas : AppColors.lightCanvas,
+      scaffoldBackgroundColor: isDark
+          ? AppColors.darkCanvas
+          : AppColors.lightCanvas,
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: isDark ? AppColors.darkCanvas : AppColors.lightCanvas,
@@ -35,13 +36,16 @@ abstract final class AppTheme {
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: scheme.primary, width: 1.5),
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
+        ),
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: isDark ? AppColors.darkSurface : Colors.white,
-        indicatorColor:
-            isDark ? AppColors.forest.withValues(alpha: 0.42) : AppColors.mint,
+        indicatorColor: isDark
+            ? AppColors.forest.withValues(alpha: 0.42)
+            : AppColors.mint,
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         height: 72,
       ),

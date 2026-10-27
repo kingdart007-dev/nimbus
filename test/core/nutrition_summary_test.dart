@@ -14,8 +14,24 @@ void main() {
 
     test('sums calories and macronutrients', () {
       final entries = [
-        FoodEntry(id: '1', name: 'Oats', calories: 320, proteinGrams: 12, carbsGrams: 48, fatGrams: 8, loggedAt: DateTime(2026, 1, 1)),
-        FoodEntry(id: '2', name: 'Yogurt', calories: 140, proteinGrams: 10.5, carbsGrams: 14, fatGrams: 4, loggedAt: DateTime(2026, 1, 1)),
+        FoodEntry(
+          id: '1',
+          name: 'Oats',
+          calories: 320,
+          proteinGrams: 12,
+          carbsGrams: 48,
+          fatGrams: 8,
+          loggedAt: DateTime(2026, 1, 1),
+        ),
+        FoodEntry(
+          id: '2',
+          name: 'Yogurt',
+          calories: 140,
+          proteinGrams: 10.5,
+          carbsGrams: 14,
+          fatGrams: 4,
+          loggedAt: DateTime(2026, 1, 1),
+        ),
       ];
       final summary = NutritionSummary.fromEntries(entries);
       expect(summary.calories, 460);

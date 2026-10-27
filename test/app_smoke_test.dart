@@ -6,13 +6,15 @@ import 'package:nimbus/app/settings/app_preferences.dart';
 
 void main() {
   testWidgets('shows the Today dashboard', (tester) async {
-    await tester.pumpWidget(ProviderScope(
-      overrides: [
-        initialThemeModeProvider.overrideWithValue(ThemeMode.light),
-        initialLocaleProvider.overrideWithValue(const Locale('en')),
-      ],
-      child: const NimbusApp(),
-    ));
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          initialThemeModeProvider.overrideWithValue(ThemeMode.light),
+          initialLocaleProvider.overrideWithValue(const Locale('en')),
+        ],
+        child: const NimbusApp(),
+      ),
+    );
     await tester.pumpAndSettle();
     expect(find.text('Your day, in balance.'), findsOneWidget);
     expect(find.text('Nutrition today'), findsOneWidget);
@@ -20,13 +22,15 @@ void main() {
   });
 
   testWidgets('switches to the Food tab', (tester) async {
-    await tester.pumpWidget(ProviderScope(
-      overrides: [
-        initialThemeModeProvider.overrideWithValue(ThemeMode.light),
-        initialLocaleProvider.overrideWithValue(const Locale('en')),
-      ],
-      child: const NimbusApp(),
-    ));
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          initialThemeModeProvider.overrideWithValue(ThemeMode.light),
+          initialLocaleProvider.overrideWithValue(const Locale('en')),
+        ],
+        child: const NimbusApp(),
+      ),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text('Food').last);
     await tester.pumpAndSettle();

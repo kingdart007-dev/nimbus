@@ -9,10 +9,10 @@ class NutritionSummary {
   });
 
   const NutritionSummary.zero()
-      : calories = 0,
-        proteinGrams = 0,
-        carbsGrams = 0,
-        fatGrams = 0;
+    : calories = 0,
+      proteinGrams = 0,
+      carbsGrams = 0,
+      fatGrams = 0;
 
   final int calories;
   final double proteinGrams;

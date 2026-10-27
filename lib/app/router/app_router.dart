@@ -12,10 +12,42 @@ final GoRouter appRouter = GoRouter(
     StatefulShellRoute.indexedStack(
       builder: (context, state, shell) => NimbusShell(navigationShell: shell),
       branches: [
-        StatefulShellBranch(routes: [GoRoute(path: '/', name: 'today', builder: (_, __) => const TodayScreen())]),
-        StatefulShellBranch(routes: [GoRoute(path: '/food', name: 'food', builder: (_, __) => const FoodScreen())]),
-        StatefulShellBranch(routes: [GoRoute(path: '/activity', name: 'activity', builder: (_, __) => const ActivityScreen())]),
-        StatefulShellBranch(routes: [GoRoute(path: '/settings', name: 'settings', builder: (_, __) => const SettingsScreen())]),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/',
+              name: 'today',
+              builder: (_, __) => const TodayScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/food',
+              name: 'food',
+              builder: (_, __) => const FoodScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/activity',
+              name: 'activity',
+              builder: (_, __) => const ActivityScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/settings',
+              name: 'settings',
+              builder: (_, __) => const SettingsScreen(),
+            ),
+          ],
+        ),
       ],
     ),
   ],
@@ -37,10 +69,26 @@ class NimbusShell extends StatelessWidget {
           initialLocation: index == navigationShell.currentIndex,
         ),
         destinations: [
-          NavigationDestination(icon: const Icon(Icons.today_outlined), selectedIcon: const Icon(Icons.today_rounded), label: strings.get('today')),
-          NavigationDestination(icon: const Icon(Icons.restaurant_outlined), selectedIcon: const Icon(Icons.restaurant_rounded), label: strings.get('food')),
-          NavigationDestination(icon: const Icon(Icons.directions_run_outlined), selectedIcon: const Icon(Icons.directions_run_rounded), label: strings.get('activity')),
-          NavigationDestination(icon: const Icon(Icons.tune_outlined), selectedIcon: const Icon(Icons.tune_rounded), label: strings.get('settings')),
+          NavigationDestination(
+            icon: const Icon(Icons.today_outlined),
+            selectedIcon: const Icon(Icons.today_rounded),
+            label: strings.get('today'),
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.restaurant_outlined),
+            selectedIcon: const Icon(Icons.restaurant_rounded),
+            label: strings.get('food'),
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.directions_run_outlined),
+            selectedIcon: const Icon(Icons.directions_run_rounded),
+            label: strings.get('activity'),
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.tune_outlined),
+            selectedIcon: const Icon(Icons.tune_rounded),
+            label: strings.get('settings'),
+          ),
         ],
       ),
     );

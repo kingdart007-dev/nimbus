@@ -74,7 +74,9 @@ class SettingsScreen extends ConsumerWidget {
                     ],
                     selected: {mode},
                     onSelectionChanged: (selected) => unawaited(
-                      ref.read(themeModeProvider.notifier).setMode(selected.first),
+                      ref
+                          .read(themeModeProvider.notifier)
+                          .setMode(selected.first),
                     ),
                   ),
                 ),
@@ -118,9 +120,9 @@ class SettingsScreen extends ConsumerWidget {
                   onSelectionChanged: (selected) {
                     final value = selected.first;
                     unawaited(
-                      ref.read(localeProvider.notifier).setLocale(
-                            value == 'system' ? null : Locale(value),
-                          ),
+                      ref
+                          .read(localeProvider.notifier)
+                          .setLocale(value == 'system' ? null : Locale(value)),
                     );
                   },
                 ),

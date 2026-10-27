@@ -29,7 +29,10 @@ class AppCard extends StatelessWidget {
       color: surface,
       borderRadius: radius,
       clipBehavior: Clip.antiAlias,
-      child: InkWell(onTap: onTap, child: Padding(padding: padding, child: child)),
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(padding: padding, child: child),
+      ),
     );
   }
 }

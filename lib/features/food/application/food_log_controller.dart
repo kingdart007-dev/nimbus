@@ -2,8 +2,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/models/food_entry.dart';
 
-final foodLogProvider =
-    NotifierProvider<FoodLogController, List<FoodEntry>>(FoodLogController.new);
+final foodLogProvider = NotifierProvider<FoodLogController, List<FoodEntry>>(
+  FoodLogController.new,
+);
 
 class FoodLogController extends Notifier<List<FoodEntry>> {
   @override

@@ -1,7 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final waterIntakeProvider =
-    NotifierProvider<WaterIntakeController, int>(WaterIntakeController.new);
+final waterIntakeProvider = NotifierProvider<WaterIntakeController, int>(
+  WaterIntakeController.new,
+);
 
 class WaterIntakeController extends Notifier<int> {
   static const glassSizeMl = 250;

@@ -8,8 +8,9 @@ final sharedPreferencesProvider = Provider<SharedPreferencesAsync>(
 final initialThemeModeProvider = Provider<ThemeMode>((ref) => ThemeMode.system);
 final initialLocaleProvider = Provider<Locale?>((ref) => null);
 
-final themeModeProvider =
-    NotifierProvider<ThemeModeController, ThemeMode>(ThemeModeController.new);
+final themeModeProvider = NotifierProvider<ThemeModeController, ThemeMode>(
+  ThemeModeController.new,
+);
 
 class ThemeModeController extends Notifier<ThemeMode> {
   @override
@@ -18,15 +19,18 @@ class ThemeModeController extends Notifier<ThemeMode> {
   Future<void> setMode(ThemeMode mode) async {
     state = mode;
     try {
-      await ref.read(sharedPreferencesProvider).setString('theme_mode', mode.name);
+      await ref
+          .read(sharedPreferencesProvider)
+          .setString('theme_mode', mode.name);
     } catch (_) {
       // This session still honours the setting when persistence fails.
     }
   }
 }
 
-final localeProvider =
-    NotifierProvider<LocaleController, Locale?>(LocaleController.new);
+final localeProvider = NotifierProvider<LocaleController, Locale?>(
+  LocaleController.new,
+);
 
 class LocaleController extends Notifier<Locale?> {
   @override
