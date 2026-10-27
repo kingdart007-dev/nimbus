@@ -351,9 +351,12 @@ Future<void> _showAddDialog(
 
 String? _validateNumber(String? value, AppStrings s, {bool required = false}) {
   final input = value?.trim() ?? '';
-  if (input.isEmpty && !required) return null;
+  if (input.isEmpty && !required) {
+    return null;
+  }
   final number = double.tryParse(input);
-  if (number == null || number < 0 || !number.isFinite)
+  if (number == null || number < 0 || !number.isFinite) {
     return s.get('invalid_number');
+  }
   return null;
 }
