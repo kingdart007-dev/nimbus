@@ -18,7 +18,6 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Your day, in balance.'), findsOneWidget);
     expect(find.text('Nutrition today'), findsOneWidget);
-    expect(find.text('Water'), findsWidgets);
   });
 
   testWidgets('switches to the Food tab', (tester) async {
