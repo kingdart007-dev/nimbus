@@ -255,8 +255,10 @@ Future<void> _log(
     ),
   );
   controller.dispose();
-  if (minutes != null)
-    ref
-        .read(activityLogProvider.notifier)
-        .addActivity(type: type, minutes: minutes);
+  if (minutes != null) {
+    ref.read(activityLogProvider.notifier).addActivity(
+      type: type,
+      minutes: minutes,
+    );
+  }
 }
