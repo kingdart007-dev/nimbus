@@ -17,7 +17,7 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: '/',
               name: 'today',
-              builder: (_, __) => const TodayScreen(),
+              builder: (context, state) => const TodayScreen(),
             ),
           ],
         ),
@@ -26,7 +26,7 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: '/food',
               name: 'food',
-              builder: (_, __) => const FoodScreen(),
+              builder: (context, state) => const FoodScreen(),
             ),
           ],
         ),
@@ -35,7 +35,7 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: '/activity',
               name: 'activity',
-              builder: (_, __) => const ActivityScreen(),
+              builder: (context, state) => const ActivityScreen(),
             ),
           ],
         ),
@@ -44,7 +44,7 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: '/settings',
               name: 'settings',
-              builder: (_, __) => const SettingsScreen(),
+              builder: (context, state) => const SettingsScreen(),
             ),
           ],
         ),
