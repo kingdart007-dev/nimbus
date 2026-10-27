@@ -306,7 +306,7 @@ class TodayScreen extends ConsumerWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        '${waterMl} ml / $waterGoalMl ml',
+                        '$waterMl ml / $waterGoalMl ml',
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: colors.onSurfaceVariant,
                         ),
